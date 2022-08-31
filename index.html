@@ -1,0 +1,1165 @@
+<html>
+    <head>
+        <title>Library Ahoy | Build 1001 </title>
+
+        <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<style>
+      @import url('https://fonts.googleapis.com/css?family=Rubik');
+body {
+    
+  background: #ffefef;
+  font-size: 80%;
+  padding: 20px;
+  font-family: 'Rubik';
+  color:black;
+}
+
+p {
+    color:black;
+}
+
+
+.outerWrapperMain {
+  background: rgba(255, 255, 255, 0.078);
+  height: 100%;
+  width: 95%;
+  margin: 0 auto;
+  padding: 20px;
+  resize: both;
+  overflow: auto;
+}
+
+.superFontBig {
+    font-weight: 300;
+    font-size: 64px;
+    font-family: rubik;
+    color:rgba(0, 0, 0, 0.707);
+    text-transform: uppercase;
+
+}
+
+.innerYoDiv {
+  background: rgba(0, 0, 0, 0.087);
+  border-color: rgb(255, 60, 60);
+  border: 3px;
+  color: white;
+  width: 90%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  resize: both;
+  overflow: auto;
+  text-align:center;
+}
+
+/**************************************/
+/***************GENERAL****************/
+/**************************************/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  color: #666;
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+/**************************************/
+/****************TABLE*****************/
+/**************************************/
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+table {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  border-radius: 3px;
+  color: #666;
+  display: table;
+  font-size: 13px;
+  max-width: 100%;
+  overflow-x: auto;
+  position: relative;
+  width: 100%;
+}
+
+table td,
+table th {
+  border-top: 1px solid #eee;
+  display: table-cell;
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+table th {
+  border-bottom: 2px solid #eee;
+  vertical-align: middle;
+}
+
+.item-cell {
+  padding: 2px 12px;
+  /* use for cells containing buttons, sliders, etc. */
+}
+
+
+/**************************************/
+/************FORMS & INPUTS************/
+/**************************************/
+
+.form-control {
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+input,
+select,
+textarea {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #666;
+  display: block;
+  font-size: 13px;
+  line-height: 1.25;
+  max-width: 100%;
+  padding: 6px 12px;
+  position: relative;
+  width: 100%;
+}
+
+input::-moz-placeholder,
+select::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #40bb93;
+  outline: medium none;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background-color: #eee;
+  color: #999;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.inline input,
+.inline select,
+.inline textarea {
+  display: inline-block;
+  width: auto;
+}
+
+/********** Search Bar **********/
+input[type="search"] {
+  border-width: 2px;
+  display: inline-block;
+  padding-left: 2.5em;
+  transition: width 0.4s ease-in-out 0s;
+  width: 150px;
+}
+
+input[type="search"]:focus {
+  width: 60%;
+}
+
+label[for="search"] {
+  bottom: 6px;
+  color: #999;
+  left: 1em;
+  position: absolute;
+  z-index: 1;
+}
+
+[contenteditable]:hover {
+  background-color: #f8f8f8;
+  cursor: cell;
+}
+
+[contenteditable]:focus {
+  background-color: #f8f8f8;
+}
+
+
+/********** Checkbox Sliders **********/
+.switch {
+  display: inline-block;
+  height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 3.5em;
+}
+
+.switch input {
+  display: none;
+  margin: 0;
+}
+
+.slider {
+  background-color: #ccc;
+  border-radius: 1em;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.4s ease 0s;
+}
+
+.slider::before {
+  background-color: white;
+  border-radius: 0.7em;
+  bottom: 4px;
+  content: "";
+  height: 1.4em;
+  left: 4px;
+  position: absolute;
+  transition: all 0.4s ease 0s;
+  width: 1.4em;
+}
+
+input:checked + .slider {
+  background-color: #40bb93;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1.5em);
+  -ms-transform: translateX(1.5em);
+  transform: translateX(1.5em);
+}
+
+.ahoy_ticker {
+  position: fixed;
+  left: 0%;
+  /*top: auto; */
+  right: 0%;
+  /* BOTTOM IS WHERE YOU CAN CHANGE THE POSITION  */
+  bottom: 1.5%;
+  width: 100%;
+  height: 100px;
+    /* OVERFLOW SETTINGS */
+
+  overflow-y: hidden;
+  background-color: #000000;
+  outline-color: #FFFFBC;
+  outline-offset: 0px;
+  outline-style: solid;
+  outline-width: 1px;
+  text-align:center;
+  color:white;
+}
+
+ /* Create three equal columns that floats next to each other */
+ .ahoyTickerCol {
+          float: left;
+          width: 20%;
+         min-height:100%;
+          padding: 10px;
+          background-color: #0B030C;
+
+        }
+
+        .ahoyTickerColMIDDLE {
+          float: left;
+          width: 50%;
+          min-height: 100%;
+          padding: 10px;
+          font-family: "Rubik";
+          text-align:center;
+          background-color: #0B030C;
+          color:white;
+
+
+        }
+
+        .ahoyTickerColTIME {
+            background-color: #cc43df;
+          float: left;
+          min-height: 100%;
+          width: 25%;
+          padding-top: 10px;
+          font-family: "rubik";
+          left: 50%;
+            top: 20%;
+            vertical-align: top;
+            display: inline-block;
+
+
+
+        }
+
+        .ahoyTickerColWrap
+        {
+            width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+        .ayeTitle {
+            font-weight:500;
+            font-size:16px;
+        }
+
+        
+
+.imgAhoyLogo {
+  border: 11px solid rgba(221, 221, 221, 0.016);
+  border-radius: 4px;
+  padding: 5px;
+  width: auto;
+  height: 50px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+#spanTITLE
+{ 
+    font-family:Rubik, serif;
+            font-weight: 900;
+            font-size:16px;
+            text-align:center;
+            padding-top:10px;
+            padding-bottom:10px;
+            color:#FF5E7C;
+            text-transform: uppercase;
+}
+
+.superFontBig {
+    font-weight: 300;
+    font-size: 32px;
+    font-family: rubik;
+    color:rgba(255, 255, 255, 0.707);
+    text-transform: uppercase;
+
+}
+
+.superFontLink {
+    font-weight: 300;
+    font-size: 16px;
+    font-family: rubik;
+    color:rgba(255, 255, 255, 0.219);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 25px;
+    border: 1px;
+    border-color:white;
+
+}
+
+.superFontLink:hover{
+  color:white;
+}
+
+
+.superFont {
+    font-weight: 300;
+    font-size: 12px;
+    font-family: rubik;
+    color:rgba(250, 250, 250, 0.219);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 25px;
+    border: 1px;
+    border-color:white;
+
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+
+  body {
+    background-color: lightblue;
+    background-image: url('https://media1.giphy.com/media/wkKyBT94rB196/giphy.gif?cid=ecf05e47b9ypgsrn61em96kw5zberiuv0vmdperhn0uq9ch2&rid=giphy.gif&ct=g');
+  }
+
+  .ahoy_ticker {
+  position: fixed;
+  left: 0%;
+  /*top: auto; */
+  right: 0%;
+  /* BOTTOM IS WHERE YOU CAN CHANGE THE POSITION  */
+  bottom: 18.5%;
+  width: 100%;
+  height: 120px;
+    /* OVERFLOW SETTINGS */
+
+  overflow-y: hidden;
+  background-color: #ff9696;
+  outline-color: #FFFFBC;
+  outline-offset: 0px;
+  outline-style: solid;
+  outline-width: 1px;
+  text-align:center;
+  color:white;
+  size: 12px;
+}
+
+   /*-- Outer Box CSS --*/
+   .outerBox {
+    height: 60vh;
+    background: #00000000;
+    padding: 0 20px;
+    margin: 50px 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 6px 0px #ffafaf00;
+    border-radius: 5px;
+}
+
+/*-- Inner Box CSS --*/
+.innerBox {
+    background: #05c4dd03;
+    box-shadow: 0px 0px 6px 0px #e72eff;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.superFont {
+    font-weight: 300;
+    font-size: 12px;
+    font-family: rubik;
+    color:rgba(255, 255, 255, 0.219);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 25px;
+    border: 1px;
+    border-color:white;
+
+}
+
+.imgAhoyLogo {
+  border: 11px solid rgba(221, 221, 221, 0.016);
+  border-radius: 2px;
+  padding: 5px;
+  width: auto;
+  height: 40px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+ /* Create three equal columns that floats next to each other */
+ .ahoyTickerCol {
+          float: left;
+          width: 20%;
+         min-height:100%;
+          padding: 10px;
+          background-color: #0B030C;
+
+        }
+
+        .ahoyTickerColMIDDLE {
+          float: left;
+          width: 50%;
+          min-height: 100%;
+          padding: 10px;
+          font-family: "Rubik";
+          text-align:center;
+          background-color: #0B030C;
+          color:white;
+
+
+        }
+
+        .ahoyTickerColTIME {
+            background-color: #000000;
+          float: left;
+          min-height: 100%;
+          width: 15%;
+          padding-top: 10px;
+          font-family: "rubik";
+          left: 50%;
+            top: 20%;
+            vertical-align: top;
+            display: inline-block;
+
+
+
+        }
+
+        .ahoyTickerColWrap
+        {
+            width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+</style>
+    </head>
+    <body>
+<div class="outerWrapperMain">
+
+<div class="innerYoDiv">
+    <div>
+        Ahoy Library Build 1001
+    </div>
+    <!--TOP LIBRARY TABLE-->
+        <table id="ordering-table" class="advanced-web-table">
+            <thead>
+              <tr>
+                <th>Menu</th>
+                <th>Type</th>
+                <th>Date Added</th>
+                <th>Phone</th>
+                <th>Media Title</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Checkbox</th>
+                <th>Editable Column</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Clones of Clarence</td>
+                <td>I Believe in Love</td>
+                <td>.mp3 files</td>
+                <td>.mp4 files</td>
+                <td>New York</td>
+                <td>NY</td>
+                <td>
+                  <label class="switch">
+                                          <input type="checkbox">
+                                          <div class="slider"></div>
+                                      </label>
+                </td>
+                <td contenteditable></td>
+              </tr>
+              
+            </tbody>
+          </table>
+
+<!--END OF TOP LIBRARY TABLE-->
+<!--END OF TOP LIBRARY TABLE-->
+<!--END OF TOP LIBRARY TABLE-->
+<!--END OF TOP LIBRARY TABLE-->
+
+<!-- Start of TABLE OF MEDIA CONTENTS -->
+<!-- Start of TABLE OF MEDIA CONTENTS -->
+<!-- Start of TABLE OF MEDIA CONTENTS -->
+<!-- Start of TABLE OF MEDIA CONTENTS -->
+
+
+    
+        <div class="container">
+            <!--  Introduction  -->
+            <h1 class="superFontBig">Ahoy Library</h1>
+            <p>The search bar checks every text field in the table and shows only what matches. Give it a try!</p>
+            <!--  Search Bar  -->
+            <div class="form-control">
+              <label for="search"><i class="icon-search"></i></label>
+              <input class="table-filter" type="search" data-table="advanced-web-table" placeholder="Search...">
+            </div>
+            <!--  Table  -->
+            <div class="table-responsive">
+              <table id="ordering-table" class="advanced-web-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Media Name</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Checkbox</th>
+                    <th>Style</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Samuel Dylan Witch</td>
+                    <td>Don't Think Twice (Cover)</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>White Plains</td>
+                    <td>NY</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox">
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable>Old | Indie | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Clones of Clarence</td>
+                    <td>I Believe in Love</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a></td>
+                    <td>Bridgeport</td>
+                    <td>CT</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable> Acoustic | Folk | LoFi</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Samuel Dylan Witch</td>
+                    <td>Three Chord Melody</td>
+                    <td><a href="eth.ahoy.ooo">Support</a> </td>
+                    <td><a href="http://docs.google.com/uc?export=open&id=10_4HWKf-NtFebwoemWPx1rKmSOXqX5-V">Download MP3</a>/td>
+                    <td>Valhalla</td>
+                    <td>NY</td>
+                    <td>
+                      <label class="switch">
+                                              <input type="checkbox" checked>
+                                              <div class="slider"></div>
+                                          </label>
+                    </td>
+                    <td contenteditable>This field is editable.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+       
+
+
+
+
+            
+          </div>
+
+<!-- THE AHOY TICKER-->
+<!-- THE AHOY TICKER-->
+<!-- THE AHOY TICKER-->
+<!-- THE AHOY TICKER-->
+<!-- THE AHOY TICKER-->
+<!-- THE AHOY TICKER-->
+
+
+<div class="ahoy_ticker">
+
+
+
+    <div class="ahoyTickerColWrap">
+        <!-- COLUMN 1 -->
+                <!-- COLUMN 1 -->
+<!-- COLUMN 1 -->
+<!-- COLUMN 1 -->
+<!-- COLUMN 1 -->
+<!-- COLUMN 1 -->
+<!-- COLUMN 1 -->
+<!-- COLUMN 1 -->
+        <div class="ahoyTickerCol">
+            <a target="_blank" href="https://app.ahoy.ooo">
+<img class="imgAhoyLogo"src="https://assets.website-files.com/6241eb152e497109dfed842b/6241eb152e49716431ed8454_ahoy_logo_web_2%20(1)%204.png">
+            </a>
+
+
+
+
+
+        </div>
+
+
+
+<!-- COLUMN 1 -->
+<!-- COLUMN 1 -->
+<!-- COLUMN 1 -->
+<!-- COLUMN 1 -->
+
+
+
+
+<!-- COLUMN 2 -->
+<!-- COLUMN 2 -->
+<!-- COLUMN 2 -->
+<!-- COLUMN 2 -->
+<!-- COLUMN 2 -->
+
+
+                <!-- COLUMN 2 -->
+
+        <div class="ahoyTickerColMIDDLE">
+            
+<br>
+        
+            <span id="spanTITLE"> Live </span> Ahoy Library - build 1.0.1 <br>
+            <button onclick="location.href='http://app.ahoy.ooo'">Menu</button>
+            <button onclick="location.href='http://watch.ahoy.ooo'">Watch</button>
+            <button onclick="location.href='http://radio.ahoy.ooo'">Radio</button>
+            <button onclick="location.href='http://eth.ahoy.ooo'">Eth</button>
+<!-- AHOY PUSH BLOCK TITLE  -->
+<p class="superFont" id="ahoyPushTitle"></p>
+
+<br>
+
+<div id="myDiv" style="height:500px height:500px"></div>
+<script>
+
+function changeAhoyTickerDolor() {
+    document.getElementById("ahoy_ticker").style.background-color = "#ccc";
+    document.getElementById("myDIV").style.backgroundColor = "lightblue";
+
+}
+</script>
+
+        </div>
+
+
+
+
+        <!-- END OF COLUMN 2 -->
+         <!-- END OF COLUMN 2 --> <!-- END OF COLUMN 2 -->
+          <!-- END OF COLUMN 2 -->
+           <!-- END OF COLUMN 2 -->
+            <!-- END OF COLUMN 2 -->
+             <!-- END OF COLUMN 2 -->
+
+
+
+
+
+
+<!-- COLUMN 3 -->
+<!-- COLUMN 3 -->
+<!-- COLUMN 3 -->
+<!-- COLUMN 3 -->
+<!-- COLUMN 3 -->
+<!-- COLUMN 3 -->
+<!-- COLUMN 3 -->
+<!-- COLUMN 3 -->
+<!-- COLUMN 3 -->
+<!-- COLUMN 3 -->
+
+<div class="ahoyTickerColTIME">
+<!-- AHOY PUSH TIME  -->
+    <p class="superFont" id="ahoyPushTime"></p>
+<!-- TIME DISPLAY -->
+<!-- TIME DISPLAY -->
+    <span id="span"></span>
+ <!-- END OF TIME DISPLAY -->
+  <!-- END OF TIME DISPLAY -->
+
+            
+<!-- LIVE CLOCK -->
+<script>
+var span = document.getElementById('span');
+
+function time() {
+  var d = new Date();
+  var s = d.getSeconds();
+  var m = d.getMinutes();
+  var h = d.getHours();
+  span.textContent = 
+    ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
+}
+
+setInterval(time, 1000);
+</script>
+
+
+<script>
+    var span = document.getElementById('span');
+    
+    function time() {
+      var d = new Date();
+      var s = d.getSeconds();
+      var m = d.getMinutes();
+      var h = d.getHours();
+      span.textContent = 
+        ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
+    }
+    
+    setInterval(time, 1000);
+    </script>
+    
+
+
+
+</div>
+
+<!-- END OF TICKER -->
+<!-- END OF TICKER -->
+<!-- END OF TICKER -->
+<!-- END OF TICKER -->
+<!-- END OF TICKER -->
+<!-- END OF TICKER -->
+<!-- END OF TICKER -->
+<!-- END OF TICKER -->
+
+<!-- END OF TICKER -->
+<!-- END OF TICKER -->
+<!-- END OF TICKER -->
+<!-- END OF TICKER -->
+<!-- END OF TICKER -->
+<!-- END OF TICKER -->
+<!-- END OF TICKER -->
+<!-- END OF TICKER -->
+
+          <script>
+            // table search function
+// Light Javascript Table Filter
+// -by Chris Coyier
+(function(document) {
+	'use strict';
+	var LightTableFilter = (function(Arr) {
+		var _input;
+		function _onInputEvent(e) {
+			_input = e.target;
+			var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+			Arr.forEach.call(tables, function(table) {
+				Arr.forEach.call(table.tBodies, function(tbody) {
+					Arr.forEach.call(tbody.rows, _filter);
+				});
+			});
+		}
+		function _filter(row) {
+			var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+			row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+		}
+		return {
+			init: function() {
+				var inputs = document.getElementsByClassName('table-filter');
+				Arr.forEach.call(inputs, function(input) {
+					input.oninput = _onInputEvent;
+				});
+			}
+		};
+	})(Array.prototype);
+
+	document.addEventListener('readystatechange', function() {
+		if (document.readyState === 'complete') {
+			LightTableFilter.init();
+		}
+	});
+})(document);
+          </script>
+
+
+
+
+
+    </body>
+    </html>
+    
